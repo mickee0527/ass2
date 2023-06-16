@@ -1,0 +1,217 @@
+        <!--File : comm--401-ass2, Student’s Name: Lujia(Nina) Sun, StudentID: 300726390, and Date June 16 2023-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href="/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel='stylesheet' href="/@fortawesome/fortawesome-free/css/all.min.css"/>
+    <link rel='stylesheet' href='/Content/app.css' />
+    
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        
+        <a class="navbar-brand" href="#">Personal Portfolio of Lujia(Nina) Sun</a>
+        <img src="/Assests/images/logo.png">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/products">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/contact">Contact Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/contact-list">Business Contacts List</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/login">Login</a>
+            </li>
+          </ul>
+        
+        </div>
+      </div>
+    </nav>
+  
+    <header>Welcome to the <%= title %> Page</header>
+  
+    
+    
+  
+    <% 
+    if (title === 'Home') 
+    { %>
+      <p style="padding-left: 50px; padding-right: 50px;">Mission Statement: Our mission as IT specialists is to provide cutting-edge technological solutions and support that empower organizations to thrive in the digital era. We are committed to delivering reliable, secure, and scalable IT infrastructure, systems, and services that drive efficiency, productivity, and innovation. With our expertise in the latest technologies and our dedication to staying ahead of industry trends, we aim to enable our clients to leverage technology as a strategic asset. We strive to build strong partnerships with our clients, understanding their unique business needs and delivering tailored IT solutions that align with their goals. Our mission is to be a trusted advisor and a responsive partner, delivering exceptional technical expertise and unparalleled customer service to drive our clients' success."</p>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div style="text-align: right; padding-right: 50px;">
+        <p>Site Map</p>
+      
+        <a href="/about">About</a>
+        <a href="/products">Products</a>
+        <a href="/services">Services</a>
+        <a href="/contact">Contact</a>
+      </div>
+      <% include footer %>
+  <% } 
+  else if (title === 'Contact Me') 
+  { %>
+    <h3 style="padding-left: 200px;">Send Email to mickee0527@gmail.com</h3>
+    </br>
+  </br>
+  </br>
+  </br>   
+    <!-- Contact Page Content -->
+  
+    <p>Contact </p>
+  
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required><br><br>
+        
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required><br><br>
+        
+          <label for="message">Message:</label><br>
+          <textarea id="message" name="message" rows="5" required></textarea><br><br>
+        
+          <input type="hidden" name="_next" value="http://localhost:3000/home">
+          <input type="submit" value="Submit">
+      </form>
+      <div id="success-message" style="display: none;">
+      <p>Thank you for your message! I will get back to you soon.</p>
+      <p>Redirecting back to the home page...</p>
+    </div>
+  
+    <script>
+      document.querySelector('form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        // Show success message
+        document.getElementById('success-message').style.display = 'block';
+  
+        // Delay redirect to home page
+        setTimeout(function() {
+          window.location.href = 'http://localhost:3000/home';
+        }, 3000); // Redirect after 3 seconds (adjust as needed)
+      });
+    </script>
+    <% include footer %>
+  <% } 
+  else if (title === 'About') 
+  { %>
+    <div style="text-align: center;">
+    <h3>About Lujia Sun</h3>
+    <br>
+      <img src="/Assests/images/photo.jpg">
+    </div>
+      <p style="padding: 100px;">Hello, I'm Lujia Sun, a highly skilled and dedicated IT professional with a passion for IT and a strong background in Cisco technologies. At 29 years old, I have achieved the prestigious Cisco Certified Internetwork Expert (CCIE) certification, demonstrating my expertise in designing, implementing, and managing complex network infrastructures. As a woman in the tech industry, I am proud to be a part of the growing community of female IT professionals, breaking barriers and contributing to the field. With years of experience in the industry, I have successfully delivered innovative networking solutions for diverse organizations, optimizing their network performance and ensuring seamless connectivity. I am committed to continuous learning and staying up-to-date with the latest industry trends to provide cutting-edge solutions. My technical proficiency, combined with my dedication and passion for my work, enables me to deliver exceptional results for my clients and make a positive impact in the IT field.</p>
+  
+      <h2 style="text-align: center;"><a href="https://drive.google.com/file/d/1bWfinmaN3GnNo8iFQt7nk55PHj9Njw_w/view?usp=sharing">Click Here for My Resume</a></h2>
+      <% include footer %>
+  <% } 
+  else if (title === 'Products') 
+  { %>
+      <h2>About Our Project</h2>
+      
+      <br>
+      <br>
+      <br>
+  <body>
+    <table>
+      <tr>
+        <th>Project</th>
+        <th>Description</th>
+        <th>Photo</th>
+      </tr>
+      <tr>
+        <td>Merging Large Coop Internal Web</td>
+        <td>Project Description: Implemented a solution to merge multiple internal websites within a large cooperative.
+            My Role: I was involved in implementing the solution and overseeing the merging process.
+            Outcome: The project successfully merged the internal websites, allowing seamless communication and collaboration within the large cooperative. The utilization of BGP, VPN tunnels, and OSPF protocols facilitated efficient and secure communication between the merged websites.</td>
+        <td><img src="/Assests/images/project1_photo.jpg" alt="Project 1 Photo"></td>
+      </tr>
+      <tr>
+        <td>Merging Hospital Data into Cloud Services</td>
+        <td>Project Description: Led a project to centralize and merge data from various hospital departments into cloud services.
+            My Role: I took a leadership role in the project, overseeing the data merging process and managing the implementation.
+            Outcome: The project achieved centralization and consolidation of hospital data into cloud services. This enabled streamlined data access, storage, and analysis, leading to improved operational efficiency and enhanced patient care. The cloud infrastructure provided scalability, security, and easy accessibility to the merged data.</td>
+        <td><img src="/Assests/images/project2_photo.jpg" alt="Project 2 Photo"></td>
+      </tr>
+      <tr>
+        <td>TikTok AI Education with Auto Correction(Current)</td>
+        <td>Project Description: Developed an AI-driven educational platform integrated with TikTok.
+            My Role: I was responsible for the development and implementation of the AI-driven educational platform.
+            Outcome: The project resulted in the creation of an innovative educational platform that integrated with TikTok. The platform utilized AI algorithms to provide automated homework correction and personalized feedback to students. This automation enhanced the learning experience and academic performance of the students and teacher, making their education more engaging and effective.
+  </td>
+        <td><img src="/Assests/images/project3_photo.jpg" alt="Project 3 Photo"></td>
+      </tr>
+    </table>
+  </body>
+  <% include footer %>
+      
+  
+  <% } 
+  else if (title === 'Services') 
+  { %>
+    <h1>Our Services</h1>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+      .service {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      
+      .service i {
+        font-size: 24px;
+        margin-right: 10px;
+      }
+    </style>
+    <div class="service">
+      <i class="fas fa-cloud"></i>
+      <span>Cloud Services</span>
+    </div>
+    
+    <div class="service">
+      <i class="fas fa-code"></i>
+      <span>Web Development</span>
+    </div>
+    
+    <div class="service">
+      <i class="fas fa-mobile-alt"></i>
+      <span>Mobile App Development</span>
+    </div>
+    
+    <div class="service">
+      <i class="fas fa-robot"></i>
+      <span>Artificial Intelligence</span>
+    </div>
+    <% include footer %>
+  <% } 
+  
+  
+  %>
+   </script>
+  <script src="/Scripts/app.js"></script>
+  <script src="/jquery/dist/jquery.min.js"></script>
+  <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

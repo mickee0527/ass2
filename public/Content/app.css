@@ -1,0 +1,128 @@
+/* File : comm--401-ass2, Student’s Name: Lujia(Nina) Sun, StudentID: 300726390, and Date June 16 2023*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Set background color and font styles */
+  body {
+    background-color: #1a3a1e;
+    color: #fff;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header styles */
+  header {
+    padding: 20px;
+    text-align: center;
+    font-size: 36px;
+    font-family: "Font Awesome 6 free";
+  }
+  h2 {
+    padding: 50px;
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-family: "Font Awesome 6 free";
+  }
+
+  h3 {
+    padding: 50px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: "Font Awesome 6 free";
+  }
+
+  
+  /* Navigation menu styles */
+  nav {
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style: none;
+    text-align: center;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+  }
+  
+  nav ul li a:hover {
+    background-color: #555;
+  }
+  
+  /* Main content styles */
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  
+  .container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .container p {
+    margin-bottom: 20px;
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer p {
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  /* Style the table header */
+  th {
+    background-color: #2c6554;
+    color: #333;
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  /* Style the table rows */
+  tr:nth-child(even) {
+    background-color: #1d5857;
+  }
+  
+  tr:nth-child(odd) {
+    background-color: #39705d;
+  }
+  
+  /* Style the table cells */
+  td {
+    padding: 10px;
+  }
+  
+  /* Style the table images */
+  td img {
+    max-width: 300px;
+    height: auto;
+  }
+  
+  
+  
+  
+  
+  
